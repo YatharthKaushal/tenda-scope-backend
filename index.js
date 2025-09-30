@@ -11,7 +11,8 @@ app.use(json());
 
 app.post("/data", (req, res) => {
   console.log("Received POST request to /data");
-  console.log("Request body:", req.body);
+  console.log("Request body (full structure):");
+  console.log(JSON.stringify(req.body, null, 2));
   res.sendStatus(200);
 });
 
